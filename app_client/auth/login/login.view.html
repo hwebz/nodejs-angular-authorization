@@ -1,0 +1,22 @@
+<navigation></navigation>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<h1 class="form-signin-heading">Sign in</h1>
+			<p class="lead">Not a member? Please <a href="register">register</a> instead.</p>
+			<p class="text-danger" ng-if="vm.error">{{ vm.error.message }}</p>
+			<form ng-submit="vm.onSubmit()">
+				<div class="form-group">
+					<label for="email">Email address</label>
+					<input type="email" name="email" class="form-control" placeholder="Enter email" id="email" ng-model="vm.credentials.email" />
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" name="password" class="form-control" id="password" placeholder="Password" ng-model="vm.credentials.password" />
+				</div>
+				<button type="submit" class="btn btn-primary">Sign in!</button>
+			</form>
+		</div>
+	</div>
+</div>
